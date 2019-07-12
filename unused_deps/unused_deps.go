@@ -287,7 +287,7 @@ func setupAspect() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	for _, f := range []string{"WORKSPACE", "BUILD"} {
+	for _, f := range []string{"WORKSPACE", "BUILD.bazel"} {
 		if err := ioutil.WriteFile(path.Join(tmp, f), []byte{}, 0666); err != nil {
 			return "", err
 		}
